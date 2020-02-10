@@ -1,0 +1,224 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    color: #fff;
+    background-color: #f1f1f1;
+}
+h1 {
+    font-size: 1.3em;
+    font-weight: 300;
+    margin: 0;
+}
+.contact-container {
+    -ms-flex-item-align: auto;
+        -ms-grid-row-align: auto;
+        align-self: auto;
+    width: 300px;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgb(77,77,77)), to(rgb(32,32,32))) 1%;
+    background: -o-linear-gradient(top, rgb(77,77,77), rgb(32,32,32)) 1%;
+    background: linear-gradient(180deg, rgb(77,77,77), rgb(32,32,32)) 1%;
+    border-radius: 20px;
+    -webkit-box-shadow: 0px 8px 20px rgba(0,0,0,0.4);
+            box-shadow: 0px 8px 20px rgba(0,0,0,0.4);
+    padding: 2px;
+    overflow: hidden;
+}
+
+/*-- Header and Footer Styles --*/
+.header,
+.footer {
+    padding: 18px;
+    z-index: 20;
+}
+.header {
+    background: -webkit-linear-gradient(#3e3e3e,#252525);
+    border-radius: 17px 17px 0 0;
+}
+.footer {
+    background-color: #202020;
+    border-top: 2px solid #131313;
+    border-radius: 0 0 17px 17px;
+    -webkit-box-shadow: 0px -3px 5px rgba(0,0,0,0.5);
+            box-shadow: 0px -3px 5px rgba(0,0,0,0.5);
+}
+.info-option-contaner {
+    text-align: end;
+}
+.info-option {
+    cursor: pointer;
+    text-align: end;
+}
+
+/*-- Contact List / List Item Styles --*/
+.contact-container ul {
+    position: relative;
+    list-style: none;
+}
+.contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+
+    background-color: #212121;
+
+    border-top: 2px solid #131313;
+    position: relative;
+    -webkit-transition: all 0.23s ease-in-out;
+    -o-transition: all 0.23s ease-in-out;
+    transition: all 0.23s ease-in-out;
+}
+.contact:nth-child(odd) {
+    background: #1a1a1a;
+}
+.contact .contact-item {
+    padding: 10px 20px;
+}
+.contact .contact-item:nth-child(2) {
+    padding-right: 0px;
+}
+.name {
+    width: 55px;
+    border-right: 2px solid #171717;
+}
+.phone,
+.email {
+    color: #565656;
+}
+
+/*-- Contact List Item Hover Styles --*/
+.contact:hover {
+    cursor: pointer;
+}
+.contact .hover-effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #484848;
+    opacity: .0;
+    z-index: 10;
+}
+.contact .hover-effect:hover {
+    cursor: pointer;
+    opacity: .6;
+    transition: opacity .20s ease-in-out;
+    -moz-transition: opacity .20s ease-in-out;
+    -webkit-transition: opacity .20s ease-in-out;
+}
+
+/*-- Contact Status Styles --*/
+.status {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    padding: 0;
+}
+.active {
+    background: greenyellow;
+}
+.idle {
+    background: orange;
+}
+.away {
+    background: red;
+}
+
+/*-- Contact More Info Active Styles --*/
+.more-info-visible { 
+    position: relative;
+    color: #ffffff;
+    background-color: #484848 !important;
+    z-index: 20;
+}
+.more-info-visible .name {
+    border-right: 2px solid #484848;
+    -webkit-transition: all 0.23s ease-in-out;
+    -o-transition: all 0.23s ease-in-out;
+    transition: all 0.23s ease-in-out;
+}
+.more-info-visible .more-info .email-link,
+.more-info-visible .more-info .phone-link {
+    margin-bottom: 5px;
+}
+.more-info-visible .more-info,
+.more-info-visible .more-info .phone a {
+    color: #ffffff;
+}
+.more-info .email-link a,
+.more-info .phone-link a {
+    color: #0ed3da;
+}
+.more-info .email-link a:hover,
+.more-info .phone-link a:hover {
+    color: #12e7ef;
+}
+.more-info {
+    position: absolute;
+    top: 0px;
+    width: 45%;
+    right: -500px;
+    overflow: hidden;
+    z-index: 20;
+    color: #000000;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.more-info-visible .more-info {
+    height: auto;
+    overflow: visible;
+    background-color: #484848;
+    right: 0px;
+    padding: 10px 20px;
+}
+.overlay-visible {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #000000;
+    opacity: .6;
+    z-index: 10;
+    -o-transition: opacity .20s ease-in-out;
+    transition: opacity .20s ease-in-out;
+    -moz-transition: opacity .20s ease-in-out;
+    -webkit-transition: opacity .20s ease-in-out;
+}
+
+.hide {
+    display: none;
+}
